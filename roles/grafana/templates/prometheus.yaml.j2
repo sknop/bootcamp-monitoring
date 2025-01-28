@@ -6,7 +6,7 @@ datasources:
     access: proxy
     # Access mode - proxy (server in the UI) or direct (browser in the UI).
 {% for host in groups['prometheus'] %}
-      url: http://{{ host }}:9090
+    url: http://{{ host }}:9090
 {% endfor %}
     jsonData:
       httpMethod: POST
