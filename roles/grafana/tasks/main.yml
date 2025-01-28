@@ -1,0 +1,30 @@
+---
+- name: Set hostname
+  hostname:
+    name: "grafana.{{domain}}"
+
+- name: Install grafana key
+  apt_key:
+    url: https://packages.grafana.com/gpg.key
+    state: present
+
+- name: Install grafana repository
+  apt_repository:
+    repo: "deb https://packages.grafana.com/oss/deb stable main"
+    state: present
+
+- name: Install packages
+  apt:
+    name:
+      - grafana
+    state: present
+    update_cache: true
+    cache_valid_time: 3000
+
+- name: Start up Grafana service
+  systemd_service:
+    name: grafana-server
+    state: started
+    enabled: true
+    daemon-reload: true
+

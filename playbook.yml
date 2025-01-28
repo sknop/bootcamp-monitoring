@@ -1,0 +1,22 @@
+---
+- hosts: prometheus
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  vars:
+    env: dev
+    node_exporter_enabled: false
+    relabel_configs_enabled: true
+
+  roles:
+    - domain
+    - prometheus
+
+- hosts: grafana
+  become: yes
+  become_user: root
+  become_method: sudo
+  roles:
+    - domain
+    - grafana

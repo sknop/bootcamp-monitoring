@@ -1,0 +1,7 @@
+---
+zookeeper_jmxexporter_port: 8079
+kafka_controller_jmxexporter_port: 8079
+kafka_jmxexporter_port: 8080
+schema_registry_jmxexporter_port: 8078
+connect_jmxexporter_port: 8077
+ksqldb_jmxexporter_port: 8076
