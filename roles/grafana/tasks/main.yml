@@ -28,3 +28,11 @@
     enabled: true
     daemon-reload: true
 
+- name: Copy prometheus datasource file to provisioning
+  copy:
+    src: prometheus.yaml.j2
+    dest: /etc/grafana/provisioning/datasources/prometheus.yaml
+    owner: grafana
+    group: grafana
+  notify: Restart Grafana
+
