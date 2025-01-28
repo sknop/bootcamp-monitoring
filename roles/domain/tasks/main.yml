@@ -3,7 +3,7 @@
   lineinfile:
     path: /etc/systemd/resolved.conf
     regexp: "^#Domains="
-    line: "Domains={{ domain}}"
+    line: "Domains={{ domain }}"
   notify: "Restart systemd-resolved"
   tags: domain
 
