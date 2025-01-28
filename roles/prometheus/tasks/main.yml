@@ -17,4 +17,4 @@
     insertafter:
     block: "{{ lookup('template', 'prometheus.yml.j2') }}"
   notify:
-    - Restart Rrometheus
+    - Restart Prometheus
