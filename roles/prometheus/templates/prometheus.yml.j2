@@ -35,7 +35,7 @@
 
 {% endif %}
 {% if groups['kafka_controller'] is defined %}
-  - job_name: "kafka_controller"
+  - job_name: "kafka-controller"
     static_configs:
       - targets:
 {% for host in groups['kafka_controller'] %}
