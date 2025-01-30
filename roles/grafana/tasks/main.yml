@@ -36,3 +36,10 @@
     group: grafana
   notify: Restart Grafana
 
+- name: Copy dashboards to provisioning
+  copy:
+    src: dashboards
+    dest: /etc/grafana/provisioning
+    owner: grafana
+    group: grafana
+  notify: Restart Grafana
