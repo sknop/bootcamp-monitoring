@@ -8257,6 +8257,28 @@
           "type": "prometheus",
           "uid": "Prometheus"
         },
+        "definition": "label_values(kafka_controller_kafkacontroller_activecontrollercount{env=\"$env\"},instance)",
+        "description": "The instances of the Kafka Controllers",
+        "includeAll": true,
+        "label": "Controller Instance",
+        "multi": true,
+        "name": "controller_instance",
+        "options": [],
+        "query": {
+          "qryType": 1,
+          "query": "label_values(kafka_controller_kafkacontroller_activecontrollercount{env=\"$env\"},instance)",
+          "refId": "PrometheusVariableQueryEditor-VariableQuery"
+        },
+        "refresh": 1,
+        "regex": "",
+        "type": "query"
+      },
+      {
+        "current": {},
+        "datasource": {
+          "type": "prometheus",
+          "uid": "Prometheus"
+        },
         "definition": "label_values(quantile)",
         "includeAll": true,
         "label": "Percentile",
@@ -8276,28 +8298,6 @@
         "name": "query0",
         "options": [],
         "query": "",
-        "refresh": 1,
-        "regex": "",
-        "type": "query"
-      },
-      {
-        "current": {},
-        "datasource": {
-          "type": "prometheus",
-          "uid": "Prometheus"
-        },
-        "definition": "label_values(kafka_controller_kafkacontroller_activecontrollercount{env=\"$env\"},instance)",
-        "description": "The instances of the Kafka Controllers",
-        "includeAll": true,
-        "label": "Controller Instance",
-        "multi": true,
-        "name": "controller_instance",
-        "options": [],
-        "query": {
-          "qryType": 1,
-          "query": "label_values(kafka_controller_kafkacontroller_activecontrollercount{env=\"$env\"},instance)",
-          "refId": "PrometheusVariableQueryEditor-VariableQuery"
-        },
         "refresh": 1,
         "regex": "",
         "type": "query"
