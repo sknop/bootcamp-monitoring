@@ -8291,7 +8291,7 @@
         "includeAll": true,
         "label": "Controller Instance",
         "multi": true,
-        "name": "Controller_instance",
+        "name": "controller_instance",
         "options": [],
         "query": {
           "qryType": 1,
