@@ -863,7 +863,7 @@
             "uid": "Prometheus"
           },
           "editorMode": "code",
-          "expr": "sum(kafka_server_replicamanager_straypartitionscount{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"})",
+          "expr": "sum(kafka_server_replicamanager_straypartitionscount{job=\"kafka-controller\",env=\"$env\",instance=~\"$instance\"})",
           "format": "time_series",
           "hide": false,
           "instant": true,
